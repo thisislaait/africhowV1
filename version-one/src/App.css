@@ -1,9 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
 
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+
 *{
   font-family: Manrope;
 }
 
+span {
+  font-family: Playfair Display;
+}
 /*#root {
   max-width: 1280px;
   margin: 0 auto;
