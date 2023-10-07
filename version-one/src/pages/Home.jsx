@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Nav from "../components/Nav";
 import hero from "../pages/Assets/africhow banner.png";
 
 const Home = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className='lg:hidden w-full bg-green-200 min-h-screen bg-opacity-25'>
-        <Nav />
+        <Nav toggleMenu={toggleMenu} menuOpen={menuOpen} />
         <div className='snap-y snap-mandatory h-screen relative'>
             <section className='h-screen flex flex-col snap-start justify-center items-center relative overflow-hidden'>
                 <img src={hero} alt="" srcset="" className='w-full -top-8 md:hidden ' />

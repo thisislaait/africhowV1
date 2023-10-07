@@ -12,9 +12,10 @@ span {
   font-family: Playfair Display;
 }
 
-h1 {
+h1, li a, #subscribe{
   font-family: Poppins;
 }
+
 /*#root {
   max-width: 1280px;
   margin: 0 auto;
