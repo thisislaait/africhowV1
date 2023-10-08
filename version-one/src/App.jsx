@@ -1,20 +1,19 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes  } from "react-router-dom";
 import Home from "./pages/Home";
 import './App.css'
-import F_One from "./pages/Feature_One";
-import F_Two from "./pages/Feature_Two";
-import F_Three from "./pages/Feature_Three";
+import Profile from "./pages/User-profile";
 
 function App() {
 
   return (
-    <div>
-        <Home />
-        <F_One />
-        <F_Two />
-        <F_Three />
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" exact component={Home} />
+        <Route path="/profile" element={Profile} />
+      </Routes>
+    </Router>
+    
   )
 }
 

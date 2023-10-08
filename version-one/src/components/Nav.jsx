@@ -2,20 +2,23 @@ import React from 'react'
 import HamBurger from "../assets/hamburger.svg";
 import Avatar from "../assets/avatar.png";
 import Close from "../assets/hamburger close.svg";
+import { Link } from "react-router-dom";
 
 const Nav = ({ toggleMenu, menuOpen }) => {
   return (
     <div className='lg:hidden px-10 py-6 bg-green-200 text-white flex justify-between items-center absolute top-0 right-0 left-0 z-10 bg-transparent'>
       <h3 className='text-xl font-black text-black'>africhow</h3>
       <div className='flex gap-6 pointer'>
-        <img src= {Avatar} alt="" srcset="" className='w-8 pointer'/>
+        <Link to="/profile">
+          <img src= {Avatar} alt="" srcset="" className='w-8 cursor-pointer' />
+        </Link>
         <img src= {HamBurger} alt="" srcset="" className='w-8 cursor-pointer' onClick={toggleMenu} />
       </div>
 
       {/* Close button */}
       {menuOpen && (
         <div className='absolute top-4 right-4 cursor-pointer' onClick={toggleMenu}>
-          <div className='h-8 w-8'>
+          <div className='h-3 w-10 py-2 pr-4'>
             <img src= { Close } alt="" srcset="" className='z-30 relative stroke-current' />
           </div>
         </div>
@@ -24,7 +27,7 @@ const Nav = ({ toggleMenu, menuOpen }) => {
       
       {/* full screen menu */}
       {menuOpen && (
-        <div className='fixed top-0 left-0 right-0 bottom-0 pt-10 bg-green-800 flex flex-col items-center text-center justify-center'>
+        <div className='fixed top-0 left-0 right-0 bottom-0 pt-16 bg-green-800 flex flex-col items-center text-center justify-center'>
           <ul className='text-4xl font-semibold mb-10'>
             <li className='my-4 cursor-pointer mb-10' onClick={toggleMenu}>
               <a href='#chow-community'>Chow Community</a>

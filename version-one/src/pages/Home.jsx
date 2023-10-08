@@ -20,7 +20,6 @@ const Home = () => {
                     <div>
                       <button className='bg-black text-xl text-green-200 py-2 px-6 font-black mt-4 pointer'>Get Started Today <span> &rarr; </span></button>
                     </div>
-                    
                 </div>
             </section> 
         </div>
